@@ -10,7 +10,7 @@ const dirs = ls(searchPath)
   .map(file => fs.lstatSync(`${searchPath}/${file}`).isDirectory && file)
 
 
-dirs.map(dir => {
+dirs.map((dir) => {
   if (dir === keyword) {
     console.log(`${dir} matches ${keyword}`)
   } else {
